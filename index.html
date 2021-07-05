@@ -5,6 +5,124 @@
 </head>
  
 <body>
-<h1>Empty for now</h1>
+Blog:
+
+In an attempt to learn Android development, I decided to do a simple tic-tac-toe game.
+
+First realization:
+
+I couldn't just open my computer and start coding the application, like I would usually be able to when coding a terminal based application. 
+
+With that realization came a question:
+
+"How do you want the UI to look like"
+
+I wanted to have a simple grid that the user could click on to mark the board with their player.
+
+Upon answering that question, another came up in protest:
+
+"How will you implement the UI"
+
+With my basic knowledge of Android I listed all the different views I knew.
+
+TextView
+ButtonView
+EditTextView
+ImageView
+GridView
+
+With that I made a table
+<table style="width:100%">
+  <tr>
+    <th>View</th>
+    <th>Pros</th>
+    <th>Cons</th>
+  </tr>
+  <tr>
+    <th>TextView</th>
+    <th><li>Easy to implement</li></th>
+    <th><li>Hard to customize</li>
+	<li>Rows and Columns are not programmatically updated</li>
+	<li>Looks ugly</li></th>
+  </tr>
+  <tr>
+    <th>ButtonView</th>
+    <th><li>Easy to implement</li></th>
+    <th><li>Hard to customize</li>
+	<li>Rows and Columns are not programmatically updated</li>
+	<li>Extremely ugly</li></th>
+  </tr>
+  <tr>
+    <th>EditTextView</th>
+    <th><li>Easy to implement</li></th>
+    <th><li>Unneeded feature</li>
+	<li>Hard to customize</li>
+	<li>Rows and Columns are not programmatically updated</li>
+	<li>will Look extremely ugly</li></th>
+  </tr>
+  <tr>
+    <th>ImageView</th>
+    <th><li>looks good</li></th>
+    <th><li>Hard to make look good</li>
+	<li>Hard to customize</li>
+	<li>Rows and Columns are not programmatically updated</li></th>
+  </tr>
+  <tr>
+    <th>GridView</th>
+    <th><li>looks good</li>
+	<li>Rows/columns programmatically set</li>
+	<li>Helps implement UI in neater fashion</li>
+	<li>Easy to maintain</li></th>
+    <th><li>Hard to make</li></th>
+  </tr>
+</table>
+
+My priorities for the application:
+
+<ol>
+<li>UI</li>
+<li>Programmatically set/updated attributes</li>
+</ol>
+
+With the priorities in mind the clear winner was the GridView.
+
+So I was going to create this application using the GridView, and the MVVM architecture.
+
+First struggle:
+
+I didn't know how to create a GridView, so as any person would do, I went to YouTube and StackOverFlow for answers.
+
+I was bombarded with the same bad example over and over again, and left with a bit of working code and a bit of knowledge of what I was doing.
+
+My first success came when I used GitHub's search feature to narrow down on similar code.
+
+My second success was from reading articles about GridView, which shed light on what I had to do.
+ 
+I was then able to construct a working piece of code that allowed me to see what I had done.
+
+Combining the learning and searching techniques I found I was able to maximize my outcome and productivity.
+
+Towards the end of the application I wanted to add unit testing so I went with JUnit for testing, but I realized it was not going to be as straightforward as unit testing in a terminal based application.
+
+So with that in mind I had to find a library that would allow me to test my code in isolation without having to make a copy of the code to test separately. 
+
+After googling for a few minutes I saw Mockk.io pop up as a great library to use for testing code.
+
+I tinkered with it for an hour or more in an attempt to understand how to use it, but that ended up being a hassle and all I had to do was open their documentation and use their example.
+
+After unit testing was added the application was working and all it needed was a bit of UI and code polishing in highlighted areas.
+
+Once I finished polishing what needed polishing, I shipped it to GitHub marking the end of the program.
+
+Lessons Learned:
+
+<uo>
+<li>Search GitHub for example code</li>
+<li>Read articles pertaining to the topic at hand</li>
+<li>Read the documentation of a library you’re going to use</li>
+<li>Spend contiguous hours working on a project to maximize output</li>
+<li>Just because it works doesn’t means it’s finished</li>
+</uo>
+
 </body>
 </html>
