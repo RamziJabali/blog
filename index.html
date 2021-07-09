@@ -14,6 +14,9 @@
 </head>
  
 <body>
+
+	<p>07/04/21</p>
+
 <p>In an attempt to learn Android development, I decided to do a simple tic-tac-toe game.</p>
 
 <p>First realization:</p>
@@ -130,6 +133,45 @@ With that I made a table
 <li>Spend contiguous hours working on a project to maximize output</li>
 <li>Just because it works doesn’t means it’s finished</li>
 </uo>
+
+
+	<p>07/09/21</p>
+<p>In this project my goal was to make API calls to a weather server, and populate the UI with several weather attributes.</p>
+
+<p>I started this program by first adding the dependencies required for Okhttp and Retrofit.</p>
+<p>Secondly I searched up a Youtube tutorial that would teach me the basics of Retrofit and Okhttp</p>
+
+<p>While I was learning the basics I wanted to be able to apply it to to the project I wanted to make, so I looked for a weather API to use in my program</p>
+
+<ol>
+<li>Learn Retrofit</li>
+<li>Learn Okhttp</li>
+<li>Get an API to apply what I learned</li>
+</ol>
+
+<p>Once I had written the API endpoint managers, I tried right away to make the API call. Once I ran the application, it crashed. </p>
+
+<p>After a couple of Google searches I realized that I was making the call on the main thread and that was the reason for the application crashing.</p>
+
+<p>I remember here is where I started to get into the discussion of thread management. I didn’t know what a thread in this context even really was, so I decided to Google it and I was bombarded with 100 different answers. Just for sanity sake I boiled it down to, ability to run multiple sequences of code at the same time using different threads(single sequential flow of control within a program).</p>
+
+<p>After that discovery I had to make an adjustment to the code to allow it to run on the background thread as opposed to the main thread. Running the API call in the main thread causes the application to crash because the UI also runs on it. The reason for the application crashing is because the API call might have to wait for a response, which causes the UI to to also wait which inturn causes it to freeze and crash.</p>
+
+<p>The solution to that was using enqueue, which asynchronously sends a request and gets a callback of the result. Which is executed on the background thread! </p>
+
+<p>Perfect, the application was up and running!</p>
+
+<p>After that I changed the architecture to MVVM, added test cases, and added GitHub actions, finally the application was a wrap!</p>
+
+
+
+<p>What did I learn</p>
+<ol>
+<li>Do NOT be intimidated by what you don’t know</li>
+<li>Do NOT worry about all the little details</li>
+<li>Get the application up and running, then worry about making it better</li>
+</ol>
+
 
 
 </body>
