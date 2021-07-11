@@ -12,10 +12,14 @@
       }
     </style>
     <script>
-    function show(shown, hidden) {
-      document.getElementByClassName(hidden).style.display='none';
+    function show(shown) {
       document.getElementById(shown).style.display='block';
       return false;
+    }
+
+    function hideAll(){
+      document.getElementByClassName(hidden).style.display='none';  
+	    retunr false;
     }
  </script>	
  
@@ -23,8 +27,9 @@
  
 <body>
 <div id ="TableOfContents">
-<a href="#" onclick="return show('Blog1', 'Blog');">First Blog</a>
-<a href="#" onclick="return show('Blog2', 'Blog');">Second Blog</a>
+<a href="#" onclick="return hideAll();">Hide All</a>	
+<a href="#" onclick="return show('Blog1');">First Blog</a>
+<a href="#" onclick="return show('Blog2');">Second Blog</a>
 </div>
 
 <div class="Blog" id="Blog1" style="display: none;">
