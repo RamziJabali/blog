@@ -17,8 +17,8 @@
       return false;
     }
 
-    function hideAll(className){
-      document.getElementByClassName(className).style.display='none';  
+    function hideAll(){
+      document.getElementByClassName(Blog).style.display='none';  
       return false;
     }
  </script>	
@@ -26,6 +26,9 @@
 </head>
  
 <body>
+ <button onClick="hideAll()">
+        Hide All
+    </button>
 <div id ="TableOfContents">
 <a href="#" onclick="return hideAll('Blog');">Hide All</a>	
 <a href="#" onclick="return show('Blog1');">First Blog</a>
