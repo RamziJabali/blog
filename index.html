@@ -21,9 +21,12 @@
 </head>
  
 <body>
+<div id ="TableOfContents">
+<a href="#" onclick="return show('Blog1', 'Blog2');">First Blog</a>
+<a href="#" onclick="return show('Blog2', 'Blog1');">Second Blog</a>
+</div>
 
 <div id="Blog1" style="display: none;">
-	<a href="#" onclick="return show('Blog2','Blog1');">Show Second Blog</a>
 	<p>07/04/21</p>
 
 <p>In an attempt to learn Android development, I decided to do a simple tic-tac-toe game.</p>
@@ -145,7 +148,6 @@ With that I made a table
 </div>
 
 	<div id=Blog2 style="display: none;">
-	<a href="#" onclick="return show('Blog1','Blog2');">Show First Blog</a>
 	<p>07/09/21</p>
 <p>In this project my goal was to make API calls to a weather server, and populate the UI with several weather attributes.</p>
 
