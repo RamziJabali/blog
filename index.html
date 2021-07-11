@@ -13,7 +13,7 @@
     </style>
     <script>
     function show(shown, hidden) {
-      document.getElementById(hidden).style.display='none';
+      document.getElementByClassName(hidden).style.display='none';
       document.getElementById(shown).style.display='block';
       return false;
     }
