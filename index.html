@@ -11,10 +11,18 @@
         border-collapse: collapse;
       }
     </style>
+    <script>
+    function show(shown, hidden) {
+      document.getElementById(shown).style.display='block';
+      document.getElementById(hidden).style.display='none';
+      return false;
+    }
+    </script>
 </head>
  
 <body>
 
+<div id="Blog1">
 	<p>07/04/21</p>
 
 <p>In an attempt to learn Android development, I decided to do a simple tic-tac-toe game.</p>
@@ -132,9 +140,11 @@ With that I made a table
 <li>Read the documentation of a library you’re going to use</li>
 <li>Spend contiguous hours working on a project to maximize output</li>
 <li>Just because it works doesn’t means it’s finished</li>
+<a href="#" onclick="return show('Blog2','Blog1');">Show Second Blog</a>
 </uo>
+</div>
 
-
+	<div id=Blog2>
 	<p>07/09/21</p>
 <p>In this project my goal was to make API calls to a weather server, and populate the UI with several weather attributes.</p>
 
@@ -171,7 +181,8 @@ With that I made a table
 <li>Do NOT worry about all the little details</li>
 <li>Get the application up and running, then worry about making it better</li>
 </ol>
-
+ <a href="#" onclick="return show('Blog1','Blog2');">Show First Blog</a>
+</div>
 
 
 </body>
