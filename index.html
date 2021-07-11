@@ -18,7 +18,7 @@
       return false;
     }
 	    
-    function showHide(shownId) {
+    function showhide(shownId) {
              if (document.getElementById) {
           var divid = document.getElementById(shownId);
           var divs = document.getElementsByClassName("Blog");
@@ -34,8 +34,8 @@
  
 <body>
 <div id ="TableOfContents">
-<a href="#" onclick="return showHide('Blog1');">First Blog</a>	
-<a href="#" onclick="return showHide('Blog2');">Second Blog</a>	
+<a href="#" onclick="showhide('Blog1');" >Blog 1</a>
+<a href="#" onclick="showhide('Blog2');" >Blog 2</a>
 <a href="#" onclick="return show('Blog1', 'Blog2');">First Blog</a>
 <a href="#" onclick="return show('Blog2', 'Blog1');">Second Blog</a>
 </div>
