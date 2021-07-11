@@ -17,16 +17,30 @@
       document.getElementById(hidden).style.display='none';
       return false;
     }
+	    
+    function showHide(shownId) {
+             if (document.getElementById) {
+          var divid = document.getElementById(shownId);
+          var divs = document.getElementsByClassName("Blog");
+          for(var div in divs) {
+             div.style.display = "none";
+          }
+          divid.style.display = "block";
+        } 
+        return false;
+ }
     </script>
 </head>
  
 <body>
 <div id ="TableOfContents">
+<a href="#" onclick="return showHide('Blog1');">First Blog</a>	
+<a href="#" onclick="return showHide('Blog2');">Second Blog</a>	
 <a href="#" onclick="return show('Blog1', 'Blog2');">First Blog</a>
 <a href="#" onclick="return show('Blog2', 'Blog1');">Second Blog</a>
 </div>
 
-<div id="Blog1" style="display: none;">
+<div class="Blog" id="Blog1" style="display: none;">
 	<p>07/04/21</p>
 
 <p>In an attempt to learn Android development, I decided to do a simple tic-tac-toe game.</p>
@@ -147,7 +161,8 @@ With that I made a table
 </uo>
 </div>
 
-	<div id=Blog2 style="display: none;">
+
+	<div class="Blog" id="Blog2" style="display: none;">
 	<p>07/09/21</p>
 <p>In this project my goal was to make API calls to a weather server, and populate the UI with several weather attributes.</p>
 
@@ -185,7 +200,6 @@ With that I made a table
 <li>Get the application up and running, then worry about making it better</li>
 </ol>
 </div>
-
 
 </body>
 </html>
