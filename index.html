@@ -35,6 +35,7 @@
 </button>
 <a href="#" onclick="return show('Blog1');">First Blog</a>
 <a href="#" onclick="return show('Blog2');">Second Blog</a>
+<a href="#" onclick="return show('Blog3');">Third Blog</a>
 </div>
 
 <div class="Blog" id="Blog1" style="display: none;">
@@ -197,6 +198,81 @@ With that I made a table
 <li>Get the application up and running, then worry about making it better</li>
 </ol>
 </div>
+	<div class="Blog" id="Blog3" style="display: none;">
+	<p>08/17/21</p>
 
+<p>This project was a combination of everything that I have learned thus far with extra specs.</p>
+
+<ol>
+<li>Retrofit</li>
+<li>Okhttp</li>
+<li>RxJava</li>
+<li>Koin Dependency Injections</li>
+<li>OkHttp</li>
+<li>Picasso</li>
+</ol>
+
+<p>This project is a Pokedex application that shows a set number of pokemon at first and allows you to click on a pokemon of your choosing to learn more about that character.</p>
+
+<p>Broken down into two pieces first Pokedex, a set of Pokemon, and Pokemon, a specified Pokemon from the Pokedex page.</p>
+
+<p>It will also allow you to scroll down till you reach the last Pokemon available in the poke.api</p>
+
+<p>The first step that I took was pickout an API that has adequate information about Pokemons</p>
+
+<p>Lucky for me there is a very well documented pokemon API <a href="https://pokeapi.co/">Poke Api</a> made by Paul Hallet that was perfect for this project.</p>
+
+<p>With that in place I first started by creating Koin dependency injections for Retrofit, OkHttp, and GsonConverterFactory so that I can run a quick test to see a sample of the pokedex api.</p>
+
+<p>After I got the network calls working I started to build the first UI component, a screen full of Pokemon characters with their names and pictures.</p>
+
+<p>Todo that I decided to go with the GridView which would allow me to show a good amount of Pokemon on one page.</p>
+
+<p>I was able to implement the GridView without much trouble, and was able to customize the GridView without much trouble either.</p>
+
+<p>Lucky for me I was able to find a different API that contained only images of the poekmons that corresponded with PokeAPI pokemon id numbers!</p>
+
+<p>I didn't know how I would be able to show these images in my application and that's when I discovered Picasso by Square which gave me a seamless experience incorporating the pokemon Images into the Pokedex UI!</p>
+
+<p>I first tried making the two UI elements into fragments as a step up in my coding game, but I had already made one UI element into an activity and the other into a fragment I was conflicted on whether or not to go the all fragment route or the all acitivity route.</p>
+
+<p>Since I had already made alot of progress using Activities as opposed to Fragments, I decided to recreate the fragment into a activity to keep the progress of the application steady.
+
+<p>The next order of business was implementing the next UI element, a dedicated Pokemon page with multiple stats on the Pokemon.</p>
+
+<p>I needed one key piece of information to be passed to the Pokemon page, from the Pokedex page, which was the Pokemon ID.</p>
+
+<p>That gave me a bit of trouble, because I didn't know the proper etiquette of passing infromation between two activites.</p>
+
+<p>After researching and asking people that are knowledgable on the topic I ended up creating a newInstance static function that takes in Context and Pokemon Id integer.</p>
+
+<p>This newInstance function as the name implies returns a new instance of the Pokemon activity that is used to then launch it!</p>
+
+<p>After that was solved all that was left to do was to spit shine the code and make changes were they were needed and wanted.</p>
+
+<p>I ended up upgrading the Pokemon UI by adding horizontal progress bars in correlation to the pokemon stats and fixing text locations</p>
+
+<p>Another neat addition was adding animation to the launch and exit of my Pokemon Activity!</p>
+
+<p>A realized a number of problems while cleaning my code</p> 
+<ol>
+<li>The pokemon image API was not working and had an incomplete list of the prokemons</li>
+<li>I was using the wrong endpoint for my Pokedex and had to make a huge number of calls to populate the Pokedex page</li>
+<li>No use cases were created for the Pokdex and Pokemon Page</li>
+</ol>
+
+<p>One point of conflict was realizing that I had been using the wrong endpoint and that I was making needless calls left and right inorder to create the Pokedex page, luckily it was a very simple change and didn't end up actually simplifying the application</p>
+
+<p>Replacing the pokemon image API was required a bit of finnese and turned out better than the previous API I was using.</p>
+
+<p>Creating usecases took a big burden of the viewmodel for the Pokedex and Pokemon pages and ended up reducing and making the code a lot prettier!</p>
+
+<p>Take away:</p>
+<ol>
+<li>Get your app up and running then start cleaning up and adding features to it!</li>
+<li>Don't be scared to delete your code in place for better code!</li>
+<li>Don't get cold feet, just because you're unsure of your capabilities!</li>
+</ol>
+</div>
 </body>
 </html>
