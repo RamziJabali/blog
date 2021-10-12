@@ -33,9 +33,10 @@
 <button onClick="hideAll('none')">
         Hide All
 </button>
-<a href="#" onclick="return show('Blog1');">First Blog</a>
-<a href="#" onclick="return show('Blog2');">Second Blog</a>
-<a href="#" onclick="return show('Blog3');">Third Blog</a>
+<a href="#" onclick="return show('Blog1');">TicTacToe App Blog</a>
+<a href="#" onclick="return show('Blog2');">Weather App Blog</a>
+<a href="#" onclick="return show('Blog3');">Pokedex App Blog</a>
+<a href="#" onclick="return show('Blog4');">Workout Tracker App Blog</a>
 </div>
 
 <div class="Blog" id="Blog1" style="display: none;">
@@ -272,6 +273,76 @@ With that I made a table
 <li>Get your app up and running then start cleaning up and adding features to it!</li>
 <li>Don't be scared to delete your code in place for better code!</li>
 <li>Don't get cold feet, just because you're unsure of your capabilities!</li>
+</ol>
+</div>
+	<div class="Blog" id="Blog4" style="display: none;">
+  <p>08/30/21</p>
+
+<p>Workout Tracker</p>
+
+<ol>
+<li>Room Database</li>
+<li>RxJava</li>
+<li>Caldroid</li>
+<li>Koin Dependency Injections</li>
+</ol>
+
+<p>This project was done as means to learn database management for a bigger project that I am wanting to do!</p>
+
+<p>My thoughts on what I want the application to do:</p>
+<ul>
+<li>I want the user to open the app and see dates that they have/haven't worked out in</li>
+<li>I want to allow the user to click on a date to mark that they have/haven't worked out</li>
+<li>I want a database to record the dates that a user has worked out in</li>
+</ul>
+
+<p>My ideas on how I was going to conquer the project:</p>
+<ol>
+<li>Divide the project into smaller pieces</li>
+<li>Do NOT reinvent the wheel, use what others have created to better your project</li>
+<li>Decide on a database you want to use and stick with it</li>
+<li>Do NOT over commit to a specific idea you have</li>
+</ol>
+
+<p>With my ideas all laid out here is how this project went!</p>
+
+<p>I started by using the default CalendarView, and had no success in implementing any of the main features that I needed.</p>
+
+<p>I will admit that I spent an extremely unreasonable amount of time trying to figure out how to add colors to specific dates, which ultimately proved fruitless!</p>
+
+<p>My first learning moment had set on me here, after I had spent three or more hours just trying to make this CalendarView work with no results, I just had to let go of this widget and look for one that fits my needs.</p>
+
+<p>I searched GitHub for a Calendar widget that I can use and found one(<a href="https://github.com/roomorama/Caldroid">Caldroid</a>) that was perfect for my requirements.</p>
+
+<p>I quickly implemented Caldroid into my project and added on click listeners to allow users to show whether or not they had worked out on that clicked date.</p>
+
+<p>It was my first time using Dates in a project so I had to learn how to convert to and from the Long data type</p>
+
+<p>I made this using the MVVM architecture to allow it to read nicely and also because it makes the code easier to write and easier to connect later on.</p>
+
+<p>Once the calendar widget was sorted I shifted my focus to database management and decided to use <a href="https://developer.android.com/jetpack/androidx/releases/room">Room</a> after seeing that it was simple to use and had the features that I required for my project.</p>
+
+<p>This marks the end of one of the smaller pieces</p>
+
+<p>I had to learn how to make a database and how to add data to it which was a breath of fresh air!</p>
+
+<p>I first created an entity called "user_workout_schedule" which only had a date in Long and did_user_attend_date in Boolean, very basic.</p>
+
+<p>I then created a Room database, followed by a DAO.</p>
+
+<p>Creating the data access object took a while as I had no idea on how to create the standard operations, but after a couple Google searches and a couple of articles I was good to go.</p>
+
+<p>Next I created a repository for the data base, and with that out of the way all was left was connecting the pieces together and adding final touches!</p>
+
+<p>I decided to add a UseCase to allow for smooth conversion between the entities schema and the app schema. Adding usecases really allowed me to make headway and was an eye opener on how important it is to allow for abstraction.</p>
+
+<p>With a couple of tweaks here and there and a solid code review the application was done!</p>
+
+<p>Take aways:</p>
+<ol>
+<li>Do NOT get too attached to an idea</li>
+<li>Do NOT get too attached to specific technologies and be okay swapping them out for better technologies</li>
+<li>Cut your project into bite sized pieces to allow for breathing room</li>
 </ol>
 </div>
 </body>
