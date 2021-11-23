@@ -1,1 +1,1 @@
-# Blog
+https://ramzijabali.github.io/blog/
