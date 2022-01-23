@@ -378,17 +378,47 @@ First thing I had to do before I start coding was to start designing the way I w
 
 <img src="https://raw.githubusercontent.com/RamziJabali/blog/main/screenshots/original_imagination.png" alt="high fidelity prototype" width="1000" height="833">
 
-<p>
-	My original thought process was to have all the statistics on one tab, and in the another tab have a Google maps view which shows you a specified run from the statictics page.
+<p>	My original thought process was to have all the statistics on one tab, and in the another tab have a Google maps view which shows you a specified run from the statictics page.</p>
 
-	Obviously this was not a very smart design, because having every possible statictic in one screen would make it extremely crowded. This is where I started shifting my focus from other applications into something more simple.
+<p>	Obviously this was not a very smart design, because having every possible statictic in one screen would make it extremely crowded. This is where I started shifting my focus from other applications into something more simple.</p>
 
-	I decided instead of having every type of statictic present, why not just have a couple of essential statistics that the user can see.
-</p>
+<p>I decided instead of having every type of statictic present, why not just have a couple of essential statistics that the user can see.</p>
 
-<h3>Redesign of the application statictis page:</h3>
+<h3>Redesign of the application statistics page:</h3>
 
 <img src="https://raw.githubusercontent.com/RamziJabali/blog/main/screenshots/first%20look.png" alt="App in use" width="500" height="333">
+
+<p>I also decided that the calendar would be it's own page and that would be where you could see your runs and your routes.</p>
+
+<p>The design of the calendar screen doesn't really change much, except for minor font and formatting changes in the text. </p>
+
+<h3>Calendar Screen</h3>
+<img src="https://raw.githubusercontent.com/RamziJabali/blog/main/screenshots/calendar_look.png" alt="Calendar page" width="500" height="333">
+
+<p>After spending a lot of time on designing I decided to start coding the application.</p>
+
+<h4>How I split my project:</h4>
+<ol>
+<li>Database design</li>
+<li>Setting up database</li>
+<li>Calendar Page</li>
+<li>Getting user location</li>
+<li>Granting permissions</li>
+<li>Foreground service</li>
+<li>Motivational quotes</li>
+<li>Worker manager</li>
+</ol>
+
+<h2>Data base design</h2>
+
+<h3>My database design for this project.</h3>
+
+<p>I needed to make sure that I had a one to many relationship for the jog entries so that I didn't have to query all the fields in my jog entries table, but instead have a table that summarizes a group of jog enteries into one record.</p>
+
+<img src="https://raw.githubusercontent.com/RamziJabali/blog/main/screenshots/DataBase.png" alt="App in use" width="500" height="333">
+
+
+<h3> Setting up database</h3>
 
 </div>
 </body>
